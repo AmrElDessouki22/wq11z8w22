@@ -1,3 +1,4 @@
+```tsx
 import '@/app/globals.css';
 import { ReactNode } from 'react';
 import { NotesProvider } from '@/contexts/NotesContext';
@@ -10,14 +11,19 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <NotesProvider>
-      <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-1 container mx-auto px-4">{children}</main>
-        <Footer />
-      </div>
-    </NotesProvider>
+    <html>
+      <body>
+        <NotesProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1 container mx-auto px-4">{children}</main>
+            <Footer />
+          </div>
+        </NotesProvider>
+      </body>
+    </html>
   );
 };
 
 export default Layout;
+```
