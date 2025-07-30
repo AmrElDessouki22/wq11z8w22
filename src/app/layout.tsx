@@ -1,4 +1,4 @@
-import '../globals.css';
+import '@/app/globals.css';
 import { ReactNode } from 'react';
 import { NotesProvider } from '@/contexts/NotesContext';
 import Header from '@/components/ui/Header';
